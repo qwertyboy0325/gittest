@@ -1,0 +1,33 @@
+<div class="row justify-content-center">
+    <div class="col-md-4" [hidden]="submitted">
+        <form [formGroup]="form" name="loginForm" (ngSubmit)="login()" #loginForm="ngForm" >
+            <div class="form-group">
+                <label for="accountBox">Account</label>
+                <input formControlName="account" type="text" id="accountBox" placeholder="account" class="form-control" 
+                 [(ngModel)]="user.account" name="account" required>
+                <div [hidden]="account.valid|| account.pristine" class="alert alert-danger">
+                    Email is required
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="passwordBox">Password</label>
+                <input formControlName="password" type="password" id="passwordBox" placeholder="Password" class="form-control" 
+                required [(ngModel)]="user.password" name="password" >
+                <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
+                    Password is required
+                </div>
+            </div>
+            <div class="form-check">
+                <input formControlName="rememberMe" type="checkbox" class="form-check-input" id="rememberCbx" 
+                required [(ngModel)]="user.isremember" name="rememberMe">
+                <label class="form-check-label" for="rememberCbx">Remember me</label>
+            </div>
+            <div class="row justify-content-center">
+                <button type="submit" class="btn btn-primary btn-success" id="submitBtn" 
+                [disabled]="!account.valid||!password.valid">submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{{token}}

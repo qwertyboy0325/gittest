@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-    <a class="navbar-brand text-white" routerLink="/">FaceBook</a>
+    <a class="navbar-brand text-white" routerLink="/">FakeBook</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -7,18 +7,12 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-                <a class="nav-link text-white" routerLink="./login">關於我 </a>
+                <a class="nav-link text-white" routerLink="/friends">朋友</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">朋友</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#">貼文</a>
+                <a class="nav-link text-white" routerLink="/profile">個人資料</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search">
-            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-        </form>
+            <a routerLink="/user/login"><button class="btn btn-outline-light my-2 my-sm-0">登入</button></a>
     </div>
 </nav>
